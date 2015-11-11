@@ -4,6 +4,12 @@
 
 <ul>
   <% @products.each do |product| %>
-  <li><a href="/products/<%= product.id %>"><%= product.name %></a></li>
+  <li>
+    <a href="/products/<%= product.id %>"><%= product.name %></a>
+    <form method="POST" action='products/<%=product.id %>'>
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Delete product">
+    </form>
+  </li>
   <% end %>
 </ul>

@@ -37,3 +37,9 @@ get '/products/:id' do
   erb :'products/show'
 end
 
+delete '/products/:id' do
+  product = Product.find(params[:id])
+  product.destroy
+
+  redirect '/products'
+end
