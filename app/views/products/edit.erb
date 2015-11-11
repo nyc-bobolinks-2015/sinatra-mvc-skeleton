@@ -1,0 +1,12 @@
+<form method="POST" action="/products/<%=@product.id%>">
+  <input type="hidden" name="_method" value="put" />
+  <label for="name">Name:</label>
+  <input type="text" name="name" value="<%=@product.name %>"/>
+  <label for="name">Price:</label>
+  <input type="text" name="price" value="<%=@product.price %>"/>
+  <label for="name">Description:</label>
+  <input type="text" name="description" value="<%=@product.description %>"/>
+  <label for="name">Color:</label>
+  <input type="text" name="color" value="<%=@product.color %>"/>
+  <input type="submit" value="Update product" />
+</form>
