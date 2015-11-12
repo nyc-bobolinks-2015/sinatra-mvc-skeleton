@@ -43,3 +43,8 @@ delete '/products/:id' do
 
   redirect '/products'
 end
+
+get '/categories/:id/products/new' do
+  @id= params[:id]
+  erb :'products/new'
+end
