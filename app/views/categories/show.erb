@@ -1,0 +1,12 @@
+<h1><%= @category.name %> </h1>
+<p><a href="/categories/<%= @category.id%>/products/new">Create Product</a></p>
+<h3><%= @category.description %> </h3>
+<p><a href="/categories/<%= @category.id%>/edit">Edit category</a></p>
+
+<ul>
+  <% @products.each do |product| %>
+  <li><a href="/products/<%=product.id %>"><%= product.name %></a></li>
+  <% end %>
+</ul>
+
+<p><a href="/categories">Back to Categories</a></p>

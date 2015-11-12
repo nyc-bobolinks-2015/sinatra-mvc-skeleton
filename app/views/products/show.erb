@@ -1,0 +1,22 @@
+<h1><%= @product.name %></h1>
+
+<form method="POST" action='/products/<%=@product.id %>'>
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Delete product">
+</form>
+
+<p><small><a href="/products/<%= @product.id %>/edit">Edit Product</a></small></p>
+
+<h3>Price: $<%= @product.price %> </h3>
+
+<p><%= @product.description %></p>
+
+<h5>Color: <%= @product.color %></h5>
+
+<p>Categories:
+  <% @product.categories.each do |category| %>
+  <a href="/categories/<%=category.id %>"><%= category.name %></a>
+  <% end %>
+</p>
+
+<p><a href="/products">Back to Products</a></p>
