@@ -1,3 +1,4 @@
 class Product < ActiveRecord::Base
-  # Remember to create a migration!
+  has_many :categories_products
+  has_many :categories, through: :categories_products
 end

@@ -1,0 +1,8 @@
+<form method="POST" action="/categories/<%= @category.id %>">
+  <input type="hidden" name="_method" value="put" />
+  <label for="name">Name:</label>
+  <input type="text" name="name" value="<%=@category.name %>"/>
+  <label for="name">Description:</label>
+  <input type="text" name="description" value="<%=@category.description %>"/>
+  <input type="submit" value="Update product" />
+</form>
