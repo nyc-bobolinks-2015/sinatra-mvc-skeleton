@@ -10,3 +10,17 @@
   <input type="text" name="color" value="<%=@product.color %>"/>
   <input type="submit" value="Update product" />
 </form>
+
+<h3>Add a Category</h3>
+
+<ul>
+  <% @categories.each do |category| %>
+  <li>
+    <form method="POST" action="/products/<%=@product.id%>">
+      <input type="hidden" name="_method" value="put" />
+      <input type="text" name="category" value="<%= category.name %>" />
+      <input type="submit" value="Add category" />
+    </form>
+  </li>
+  <% end %>
+</ul>

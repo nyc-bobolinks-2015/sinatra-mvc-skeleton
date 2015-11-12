@@ -8,6 +8,7 @@ get '/products/new' do
 end
 
 get '/products/:id/edit' do
+  @categories = Category.all
   @product = Product.find(params[:id])
   erb :'products/edit'
 end
@@ -22,11 +23,17 @@ post '/products/:id' do
 end
 
 put '/products/:id' do
-  @product = Product.find(params[:id])
-  @product.update_attributes(name: params[:name],
+  if params[:category]
+    category = Category.find_by(name: params[:category])
+    product = Product.find(params[:id])
+    product.categories << category
+  else
+    product = Product.find(params[:id])
+    product.update_attributes(name: params[:name],
                              price: params[:price],
                              description: params[:description],
                              color: params[:color])
+  end
 
   redirect '/products'
 end
