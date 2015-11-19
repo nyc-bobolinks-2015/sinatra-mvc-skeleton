@@ -1,0 +1,17 @@
+<h1> Hacker News Clone </h1>
+  <p> Current Trends: </p>
+
+<% @posts.each do |post| %>
+  <h4><a href="/posts/<%=post.id%>"><%=post.title%></a></h4>
+<% end %>
+  <br>
+  <br>
+<form action="/users"   method = "get">
+  <input type="submit" value="Click Here To Login">
+</form>
+
+
+
+
+
+

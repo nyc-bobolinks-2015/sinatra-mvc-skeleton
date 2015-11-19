@@ -1,0 +1,8 @@
+<h4><%=@post.title%><h4>
+<h5><%=@post.body%><h5>
+  <form method ="get" action= "/posts/<%=@post.id%>/edit">
+    <input type="submit" value="edit">
+    <br>
+   <form method ="put" action= "/posts">
+    <input type="submit" value="delete">
+  </form>

@@ -1,0 +1,23 @@
+<div class="container">
+
+
+<form action="/posts/<%=@post.id%>" method= "get">
+  Title:<br>
+  <input type="text" name="post[body]">
+  <br>
+  Post:<br>
+  <input type="text">
+  <textarea rows="4" cols="50">
+  </textarea>
+  <br><br>
+  <input type="submit" value="Return To Hacker News">
+</form>
+
+<form action="/posts/<%=@post.id%>/delete" method= "post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete post">
+</form>
+
+
+
+
