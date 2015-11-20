@@ -1,0 +1,9 @@
+<% @comments.each do |comment| %>
+  <div class="index-comment">
+    <div class="comment">
+      <p><%= comment.created_at %></p>
+      <p><%= comment.user_id %></p>
+      <p><%= comment.content %></p>
+    <div>
+  </div>
+<% end %>

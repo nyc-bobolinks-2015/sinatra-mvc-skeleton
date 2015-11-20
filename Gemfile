@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 # PostgreSQL driver
 gem 'pg'
@@ -12,6 +12,7 @@ gem 'activerecord'
 gem 'bcrypt-ruby'
 
 gem 'rake'
+gem 'pry'
 
 gem 'shotgun'
 

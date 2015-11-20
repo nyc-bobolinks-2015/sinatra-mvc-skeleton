@@ -15,9 +15,37 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title></title>
+  <title>Hacker News</title>
 </head>
 <body>
+<div id="header">
+  <ul>
+    <li><div id="little-y">Y<div>
+    <li><a href="/">Hacker News</a></li>
+    <li> | </li>
+    <li><a href="/comments/index">comments</a></li>
+    <li> | </li>
+    <li><a href="/">show</a></li>
+    <li> | </li>
+    <li><a href="/">ask</a></li>
+    <li> | </li>
+    <li><a href="/">jobs</a></li>
+    <li> | </li>
+    <li><a href="/posts/new">submit</a></li>
+    <% if logged_in? %>
+      <div id="user-info">
+        <div>
+          <%= current_user.name %>
+        </div>
+        <div>
+          <form method="post" action="/sessions">
+            <input type="hidden" value="delete" name="_method">
+            <input type="submit" value="LOGOUT">
+          </form>
+        </div>
+      </div>
+    <% end %>
+</div>
 <div id="content">
   <%= yield %>
 </div>

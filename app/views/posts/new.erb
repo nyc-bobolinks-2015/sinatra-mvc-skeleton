@@ -1,0 +1,16 @@
+<% if logged_in? %>
+  <h2>SUBMIT A POST</h2>
+  <ol class="form">
+    <form method="post" action="/posts">
+      <li><input id="title" name="post[title]" placeholder="Title"></li>
+      <li><input id="content" name="post[content]" placeholder="Content"></li>
+      <li><input type="submit" value="submit"></li>
+    </form>
+  </ol>
+<% else %>
+  <p>You must sign up or log in before submitting a post</p>
+    <ul>
+      <li><a href="/sessions">LOGIN</a></li>
+      <li><a href="/users">SIGNUP</a></li>
+    </ul>
+ <%end%>

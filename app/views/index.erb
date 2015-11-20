@@ -1,0 +1,6 @@
+<ol>
+  <% @posts.each do |post| %>
+    <li><a href="#">[^]</a><a href="/posts/<%="#{post.id}"%>"><%=post.title%> (<%= post.content %>)</a></li>
+    <p># points - by <%= post.user.name %> - time since post - <a href="/posts/<%= "#{post.id}"  %>"><%=post.comments.count%> comments</a></p>
+  <% end %>
+</ol>

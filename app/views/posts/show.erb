@@ -1,0 +1,20 @@
+<a href="#">[^]</a><a href="<%@post.content%>"><%=@post.title%> (<%= @post.content %>)</a></li>
+<p># points - by <a href="/users/<%=@post.user_id%>"><%=@post.user.name%></a> 1 day ago <a href="/posts/<%="#{@post.id}"%>"><%=@post.comments.count%> comments</a></p>
+
+<div class="form">
+  <ol class="form">
+  <form method="post" action="/comments">
+    <li><input type="text" name="comment[title]" placeholder="Write your title here..."></li>
+    <li><input type="text" name="comment[content]" placeholder="Write your comment here..."></li>
+    <li><input type="submit" value="submit"></li>
+  </form>
+  </ol>
+</div>
+
+  <% @post_comments.each do |post_comment| %>
+    <%= @post_comment.title %>
+    <%= @post_comment.content %>
+  <% end %>
+
+
+
