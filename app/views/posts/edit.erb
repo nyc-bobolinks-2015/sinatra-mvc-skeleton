@@ -1,20 +1,15 @@
-h1> You Have Edited Your Entry.  Take One Last Look: </h1>
-  <%@post.body%>
-
-<form action="/entries<%=@entry.id%>" method= "post">
-<input type="hidden" name="_method" value="put">
-  Title:<br>
-  <input type="text" name="entry[body]">
-  <br>
-  Post:<br>
-  <input type="text">
-  <textarea rows="4" cols="50">
-  </textarea>
-  <br><br>
-  <input type="submit" value="Return For Homepage!">
-</form>
-
-<form action="/entries/<%=@entry.id%>/delete" method= "post">
-  <input type="hidden" name="_method" value="delete">
-  <input type="submit" value="Delete post">
-</form>
+<div class="container">
+  <form action="/posts/<%=@epost.id%>" method= "post">
+    <input type="hidden" name="_method" value="put">
+      <label>Title:<label>
+        <input type="text" name="post[title]" value="<%=@post.title%>"</input>
+      <br>
+     <label>Link<label>
+       <input type="text" name="post[url]" value="<%=@post.url"%>"</input>
+      <br>
+     <label>Text<label>
+       <textarea name="post[body]" rows="4" cols="30"><%=@post.body %></textarea>
+      <br>
+    <input class="btn btn-default"  type="submit" value="Click To Update Post">
+   </form>
+</div>

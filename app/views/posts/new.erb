@@ -5,17 +5,18 @@
 
 
 <form action="/posts"   method = "post">
-   Title:<br>
- <input type="text" name="title">
+   <label>Title:<label>
+     <input type="text" name="post[title]"</input>
     <br>
-    <br><br>
-  Post<br>
-  <textarea  name="body" rows="4" cols="50">
+   <label>Link<label>
+     <input type="text" name="post[url]"</input>
+    <br>
+   <label>text<label>
+     <textarea  name="post[body]" rows="4" cols="50"></textarea>
+    <br>
+  <input class="btn btn-default"  type="submit" value="Click Here To Submit">
+  </form>
+</div>
 
-  </textarea>
-  <br><br>
-  <input type="submit" value="Click Here To Submit">
-</form>
-
- <br><br>
+ 
 

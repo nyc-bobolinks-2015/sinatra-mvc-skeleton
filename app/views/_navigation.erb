@@ -1,0 +1,9 @@
+<body>
+  <td style="line-height:12pt; height:10px;"><span class="pagetop"><b class="brandname"><a href="news">Hackerette     News</a></b>
+     <a href="/posts">All</a> | <a href="/comments">Comments</a> | <a href="/posts/show">Show</a> |<a href="/users">Submit A Post</a> | <a href="/users">Login</a>          
+    </span></td>
+  <ol type="1"> <% posts.each do |post| %>     
+      <li> <a href="/posts/<%=post.id%>"><%=post.title%></a></li>  
+     <% end %> 
+  </ol>
+</body>
